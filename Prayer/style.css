@@ -1,0 +1,31 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f3f3f3;
+}
+
+.container {
+  border: 5px solid red;
+}
+
+.box {
+  padding: 30px;
+  text-align: center;
+  font-size: 20px;
+  color: #f3f3f3;
+}
+
+.box-1 {
+  background: #c45647;
+}
+.box-2 {
+  background: #33ba2e;
+}
+.box-3 {
+  background: #4188c2;
+}
+.box-4 {
+  background: #a257ab;
+}
+.box-5 {
+  background: #9ea141;
+}
