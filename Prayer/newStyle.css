@@ -38,8 +38,7 @@ body {
   text-align: center;
   font-size: 20px;
   color: #f3f3f3;
-  /* border: 1px solid red; */
-  justify-content: space-evenly;
+  margin: 10px;
 }
 
 .box-1 {
