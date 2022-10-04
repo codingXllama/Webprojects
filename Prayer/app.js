@@ -119,10 +119,12 @@ async function getPrayer() {
   const monthNumber = new Date().getMonth() + 1;
   // console.log(monthNumber);
   const currentYear = new Date().getFullYear();
+  const monthNow = now.getMonth() + 1;
+  // console.log("current month", today);
   console.log("Current Year is:", currentYear);
   // console.log(`The current month is:${currentMonth}`);
-  const apiURL = `http://api.aladhan.com/v1/hijriCalendarByCity?city=${myCity}&country=${myCountry}&method=2&month=${monthNumber}&year=${currentYear}`;
-  // const apiURL = ` http://api.aladhan.com/v1/calendarByAddress?address=65%20Ellis%20St%20E,%20${myCity},%20ON%20N8X%202G8&method=4&day=${todaysMonthDay}&month=${monthNumber}&year=${currentYear}`;
+  // const apiURL = `http://api.aladhan.com/v1/hijriCalendarByCity?city=${myCity}&country=${myCountry}&method=2&month=${monthNumber}&year=${currentYear}`;
+  const apiURL = ` http://api.aladhan.com/v1/calendarByAddress?address=65%20Ellis%20St%20E,%20${myCity},%20ON%20N8X%202G8&method=4&day=${todaysMonthDay}&month=${monthNumber}&year=${currentYear}`;
 
   // console.log(apiURL);
   // attempting to complete a fetch request
