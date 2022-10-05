@@ -1,3 +1,4 @@
 possible api's:
 
 http://api.aladhan.com/v1/calendarByAddress?address=65%20Ellis%20St%20E,%20Windsor,%20ON%20N8X%202G8&method=4&day=31&month=07&year=2022
+http://api.aladhan.com/v1/calendarByAddress?address=65%20Ellis%20St%20E,%20Windsor,%20ON%20N8X%202G8&method=2&day=4&month=10&year=2022
