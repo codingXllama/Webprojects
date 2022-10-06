@@ -1,16 +1,32 @@
 fetch("PrayerTimes.json")
   .then(function (response) {
+    // var now = new Date();
+    // const monthNumber = new Date().getMonth() + 1;
+    // // console.log(monthNumber);
+    // const currentYear = new Date().getFullYear();
+    // var todaysMonthDay = now.getDate();
+    // var todaysDate = currentYear + "-" + monthNumber + "-" + todaysMonthDay;
+    // console.log(typeoftodaysDate);
+    // var currentDate=
     return response.json();
   })
 
   // to access the data
 
   .then(function (products) {
+    var now = new Date();
+    const monthNumber = new Date().getMonth() + 1;
+    // console.log(monthNumber);
+    const currentYear = new Date().getFullYear();
+    var todaysMonthDay = now.getDate();
+    var todaysDate = currentYear + "-" + monthNumber + "-0" + todaysMonthDay;
+    console.log(todaysDate);
+
     let placeholder = document.querySelector(".container");
     let out = "";
 
     for (let product of products) {
-      if (product.Date == "2022-01-01") {
+      if (product.Date == todaysDate) {
         out += `
             <p> Fajr </p>
             <p> Adhan: ${product.Fajr}</p>
