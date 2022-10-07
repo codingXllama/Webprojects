@@ -1,13 +1,5 @@
 fetch("PrayerTimes.json")
   .then(function (response) {
-    // var now = new Date();
-    // const monthNumber = new Date().getMonth() + 1;
-    // // console.log(monthNumber);
-    // const currentYear = new Date().getFullYear();
-    // var todaysMonthDay = now.getDate();
-    // var todaysDate = currentYear + "-" + monthNumber + "-" + todaysMonthDay;
-    // console.log(typeoftodaysDate);
-    // var currentDate=
     return response.json();
   })
 
