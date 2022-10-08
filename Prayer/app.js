@@ -6,6 +6,7 @@ const fajrIqama_timing = document.getElementById("fajr-iqama");
 const sunrise_timing = document.getElementById("sunrise-time");
 const duhrAdhan_timing = document.getElementById("duhr-adhan");
 const duhrIqama_timing = document.getElementById("duhr-iqama");
+var ishaBox = document.getElementsByClassName("box-9");
 
 const asrAdhan_timing = document.getElementById("asr-adhan");
 const asrIqama_timing = document.getElementById("asr-iqama");
@@ -208,6 +209,11 @@ async function getPrayer2() {
           //Isha
           ishaAdhan = prayer.Isha;
           ishaIqama = prayer.IshaIqama;
+
+          if (currentTime > ishaAdhan) {
+            console.log("hi");
+            ishaBox.body.style.background = "Red";
+          }
 
           out += `
             <p> Fajr </p>
