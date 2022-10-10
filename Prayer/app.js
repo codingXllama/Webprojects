@@ -6,7 +6,7 @@ const fajrIqama_timing = document.getElementById("fajr-iqama");
 const sunrise_timing = document.getElementById("sunrise-time");
 const duhrAdhan_timing = document.getElementById("duhr-adhan");
 const duhrIqama_timing = document.getElementById("duhr-iqama");
-var ishaBox = document.getElementsByClassName("box-9");
+const ishaBox = document.getElementById("ishaBox");
 
 const asrAdhan_timing = document.getElementById("asr-adhan");
 const asrIqama_timing = document.getElementById("asr-iqama");
@@ -211,8 +211,11 @@ async function getPrayer2() {
           ishaIqama = prayer.IshaIqama;
 
           if (currentTime > ishaAdhan) {
-            console.log("hi");
-            ishaBox.body.style.background = "Red";
+            // ishaBox.style.backgroundColor = "#ff8396";
+            console.log("current time type:" + typeof currentTime);
+            console.log("type of isha adhan: " + typeof ishaAdhan);
+          } else {
+            ishaBox.style.backgroundColor = "";
           }
 
           out += `
