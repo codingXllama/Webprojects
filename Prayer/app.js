@@ -82,11 +82,11 @@ function doDate() {
 // updating the time every second
 setInterval(doDate, 1000);
 
-function newPrayer() {
-  // console.log(apiPrayer[0].timings);
-  // console.log("hi");
-  fajrAdhan_label.textContent = "ss";
-}
+// function newPrayer() {
+//   // console.log(apiPrayer[0].timings);
+//   // console.log("hi");
+//   fajrAdhan_label.textContent = "ss";
+// }
 
 // async function getPrayer() {
 //   // showLoader();
@@ -179,44 +179,50 @@ async function getPrayer2() {
     // to access the data
 
     .then(function (allPrayers) {
+      console.log("hi");
       var now = new Date();
       const monthNumber = new Date().getMonth() + 1;
       // console.log(monthNumber);
       const currentYear = new Date().getFullYear();
       var todaysMonthDay = now.getDate();
-      var todaysDate = currentYear + "-" + monthNumber + "-0" + todaysMonthDay;
+      // var todaysDate = currentYear + "-" + monthNumber + "-0" + todaysMonthDay;
+      var todaysDate = currentYear + "-" + monthNumber + "-" + todaysMonthDay;
+
       console.log(todaysDate);
 
-      let placeholder = document.querySelector(".container");
+      // let placeholder = document.querySelector(".container");
       let out = "";
 
       for (let prayer of allPrayers) {
+        // console.log(todaysDate);
         if (prayer.Date == todaysDate) {
-          sunriseTime = prayer.Sunrise;
-          fajrAdhan = prayer.Fajr;
-          fajrIqama = prayer.FajrIqama;
+          var sunriseTime = prayer.Sunrise;
+          console.log(sunriseTime);
+          var fajrAdhan = prayer.Fajr;
+          var fajrIqama = prayer.FajrIqama;
+
           // Duhr timing
-          duhrAdhan = prayer.Dhuhr;
-          duhrIqama = prayer.DhuhrIqama;
+          var duhrAdhan = prayer.Dhuhr;
+          var duhrIqama = prayer.DhuhrIqama;
           //Asr  timing
-          asrAdhan = prayer.Asr;
-          asrIqama = prayer.AsrIqama;
+          var asrAdhan = prayer.Asr;
+          var asrIqama = prayer.AsrIqama;
 
           // Maghrib timing
-          maghribAdhan = prayer.Maghrib;
-          maghribIqama = prayer.MaghribIqama;
+          var maghribAdhan = prayer.Maghrib;
+          var maghribIqama = prayer.MaghribIqama;
 
           //Isha
-          ishaAdhan = prayer.Isha;
-          ishaIqama = prayer.IshaIqama;
+          var ishaAdhan = prayer.Isha;
+          var ishaIqama = prayer.IshaIqama;
 
-          if (currentTime > ishaAdhan) {
-            // ishaBox.style.backgroundColor = "#ff8396";
-            console.log("current time type:" + typeof currentTime);
-            console.log("type of isha adhan: " + typeof ishaAdhan);
-          } else {
-            ishaBox.style.backgroundColor = "";
-          }
+          // if (currentTime > ishaAdhan) {
+          //   // ishaBox.style.backgroundColor = "#ff8396";
+          //   console.log("current time type:" + typeof currentTime);
+          //   console.log("type of isha adhan: " + typeof ishaAdhan);
+          // } else {
+          //   ishaBox.style.backgroundColor = "";
+          // }
 
           out += `
             <p> Fajr </p>
@@ -240,8 +246,9 @@ async function getPrayer2() {
         // placeholder.innerHTML = out;
       }
       console.log(out);
-      fajrAdhan_timing.innerHTML = fajrAdhan;
+
       fajrIqama_timing.innerHTML = fajrIqama;
+      fajrAdhan_timing.innerHTML = fajrAdhan;
 
       duhrAdhan_timing.innerHTML = duhrAdhan;
       duhrIqama_timing.innerHTML = duhrIqama;
