@@ -36,13 +36,20 @@ body {
 }
 
 .box {
-  display: flex;
-  padding: 10px;
-  text-align: center;
+  /* display: flex; */
+  /* //padding: 10px; */
+  /* text-align: end; */
   font-size: 20px;
   color: #5e5454;
   /* color: #f3f3f3; */
-  margin: 10px;
+  /* margin: 10px; */
+}
+
+.box,
+h2 {
+  color: Red;
+  text-align: center;
+  flex-basis: 13%;
 }
 
 .prayer-container {
@@ -65,10 +72,10 @@ body {
   font-size: 1.1rem;
   color: #5e5454;
   /* color: #f3f3f3; */
-  /* width: 100px; */
+  width: 100px;
   margin: 1rem;
   /* border: 1px solid red; */
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
 }
 
